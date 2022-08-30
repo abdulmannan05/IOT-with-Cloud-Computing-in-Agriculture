@@ -124,8 +124,49 @@ Based on the amount of water in the soil, the conductivity in the probe varies. 
 
 Similarly, when there is adequate water, the conductivity of the probe increases and the output of the comparator becomes LOW. The LED then starts glowing.
 
+# 5V Relay
+
+What is a 5V Relay?
+
+A 5v relay is an automatic switch that is commonly used in an automatic control circuit and to control a high-current using a low-current signal. The input voltage of the relay signal ranges from 0 to 5V.
+
+5V Relay Module Pin Configuration
+
+The pin configuration of the 5V relay module is shown below. This module includes 6-pins where each pin and its functionality are discussed below.
+
+![image](https://user-images.githubusercontent.com/97329187/187377782-fe72c822-45da-4514-9e42-7dea6bb3b972.png)  ![image](https://user-images.githubusercontent.com/97329187/187378337-316b2e51-fbca-43d8-98ff-36a802534f90.png)
 
 
+Normally Open (NO): This pin is normally open unless we provide a signal to the relay modules signal pin. So, the common contact pin smashes its link through the NC pin to make a connection through the NO pin
 
+Common Contact: This pin is used to connect through the load that we desire to switch by using the module.
 
+Normally Closed (NC): This NC pin is connected through the COM pin to form a closed circuit. However, this NC connection will break once the relay is switched through providing an active high/low signal toward the signal pin from a microcontroller.
+
+Signal Pin: The signal pin is mainly used for controlling the relay. This pin works in two cases like active low otherwise active high. So, in active low case, the relay activates once we provide an active low signal toward the signal pin, whereas, in an active high case, the relay will trigger once we provide a high signal toward the signal pin.
+
+However, these modules generally work on an active high signal which will strengthen the relay coil to make contact with the common terminal with the normally open terminal.
+
+5V VCC: This pin needs 5V DC to work. So 5V DC power supply is provided to this pin.
+
+Ground: This pin connects the GND terminal of the power supply
+
+Specifications
+The specifications of a 1- channel relay module include the following.
+
+Voltage supply ranges from 3.75V – 6V
+
+Quiescent current is 2mA
+
+Once the relay is active then the current is ~70mA
+
+The highest contact voltage of a relay is 250VAC/30VDC
+
+The maximum current is 10A
+
+Working
+
+The relay uses the current supply for opening or closing switch contacts. Usually, this can be done through a coil to magnetize the switch contacts & drags them jointly once activated. A spring drives them separately once the coil is not strengthened.
+
+By using this system, there are mainly two benefits, the first one is, the required current for activating the relay is less as compared to the current used by relay contacts for switching. The other benefit is, both the contacts & the coil are isolated galvanically, which means there is no electrical connection among them.
 
