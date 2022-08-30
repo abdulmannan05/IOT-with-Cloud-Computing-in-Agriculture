@@ -4,7 +4,9 @@ This project was inspired by ESP32 microcontroller and various sensors.
 
 # Hardware Components and Sensors
 •	ESP32 Dev Board
+
 •	Temprature and humidity sensor
+
 •	Rain Sensor
 
 •	Soil Moisture Sensor
@@ -16,3 +18,11 @@ This project was inspired by ESP32 microcontroller and various sensors.
 •	Breadboard
 
 •	Jumperwires
+
+# Software  Components 
+•	Thingspeak IOT Platform
+
+•	Blynk
+
+•	MIT app invertor for Bluetooth 
+
