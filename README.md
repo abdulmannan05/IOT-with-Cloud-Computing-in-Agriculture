@@ -68,7 +68,8 @@ Specifications of ESP32
 # DHT11  Humidity and Temperature Sensor
 The DHT11 Humidity and Temperature Sensor consists of 3 main components. A resistive type humidity sensor, an NTC (negative temperature coefficient) thermistor (to measure the temperature) and an 8-bit microcontroller, which converts the analog signals from both the sensors and sends out single digital signal.
 
-![image](https://user-images.githubusercontent.com/97329187/187369561-368425c1-fae1-4b43-80af-addf70aced1a.png)
+![image](https://user-images.githubusercontent.com/97329187/187379280-5dfb6302-b1d8-4fa8-af17-9110f8167397.png)
+
 
 DHT11 Humidity Sensor consists of 4 pins: VCC, Data Out, Not Connected (NC) and GND. The range of voltage for VCC pin is 3.5V to 5.5V. A 5V supply would do fine. The data from the Data Out pin is a serial digital data.
 
