@@ -3,43 +3,35 @@ This project was inspired by ESP32 microcontroller and various sensors.
 # Things Used in Projects
 
 # Hardware Components and Sensors
-•	ESP32 Dev Board
+- [ESP32 Dev Board](#esp32-dev-board)
+- [DHT11-Humidity-and-Temperature-Sensor](#dht11-humidity-and-temperature-sensor)
+- [Rain sensor](#rain-sensor)
+- [Soil Moisture Sensor](#soil-moisture-sensor)
+- [5V Relay](#5v-relay)
+-  5V mini Water Pump
+-  Breadboard
+-  jumperwires
 
-•	Temprature and humidity sensor
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
-•	Rain Sensor
+## Software  Components 
+- [Thingspeak IOT Platform](#thingspeak-iot-platform)
+- [Blynk](#blynk)
+- [MIT app invertor for Bluetooth](#mit-app-invertor-for-bluetooth)
+## Component Description
 
-•	Soil Moisture Sensor
-
-•	5V Relay Module
-
-•	5V mini Water Pump
-
-•	Breadboard
-
-•	Jumperwires
-
-# Software  Components 
-•	Thingspeak IOT Platform
-
-•	Blynk
-
-•	MIT app invertor for Bluetooth 
-
-# Component Description
-
-# ESP32
+## ESP32 Dev Board
 What is ESP32?
 
 ESP32 is a low-cost System on Chip (SoC) Microcontroller from Espressif Systems, the developers of the famous ESP8266 SoC. It is a successor to ESP8266 SoC and comes in both single-core and dual-core variations of the Tensilica’s 32-bit Xtensa LX6 Microprocessor with integrated Wi-Fi and Bluetooth.
 
 ![image](https://user-images.githubusercontent.com/97329187/187368077-c26cf005-d91a-4445-8c37-d8b7fe70dd2d.png)
 
-Pinout of ESP32 Board
+### Pinout of ESP32 Board
 
 ![image](https://user-images.githubusercontent.com/97329187/187368168-ba6a2711-80c6-4952-85f5-f4b0af2db696.png)
 
-Specifications of ESP32
+### Specifications of ESP32
 
 •	Single or Dual-Core 32-bit LX6 Microprocessor with clock frequency up to 240 MHz.
 
@@ -65,7 +57,7 @@ Specifications of ESP32
 
 •	Cryptographic Hardware Acceleration for AES, Hash (SHA-2), RSA, ECC and RNG.
 
-# DHT11  Humidity and Temperature Sensor
+## DHT11-Humidity-and-Temperature-Sensor
 The DHT11 Humidity and Temperature Sensor consists of 3 main components. A resistive type humidity sensor, an NTC (negative temperature coefficient) thermistor (to measure the temperature) and an 8-bit microcontroller, which converts the analog signals from both the sensors and sends out single digital signal.
 
 ![image](https://user-images.githubusercontent.com/97329187/187379280-5dfb6302-b1d8-4fa8-af17-9110f8167397.png)
@@ -77,7 +69,7 @@ The data from the DHT11 sensor consists of 40 – bits and the format is as foll
 
 8 – Bit data for integral RH value, 8 – Bit data for decimal RH value, 8 – Bit data for integral Temperature value, 8 – Bit data for integral Temperature value and 8 – Bit data for checksum.
 
-# Rain Sensor
+## Rain sensor
 
 ![image](https://user-images.githubusercontent.com/97329187/187372086-f02995d1-33d5-4b82-9e4a-8794d218e3ad.png)
 
@@ -85,7 +77,7 @@ The rain drop module is a printed circuit board in a rectangular shape. The size
 
 ![image](https://user-images.githubusercontent.com/97329187/187371714-decbffdf-8f92-4df5-89d4-da5afea2796c.png)
 
-Why does Resistance Change on a Rain Drop Module?
+### Why does Resistance Change on a Rain Drop Module?
 The schematic illustration shows the difference between a variety of states for the rain board. With no rain there is no connection between the two copper tracks and the resistance is infinite.
 
 During light rain there are some water drops that land on the surface of the rain board and connect the two conductor tracks. Because water is conductive, the resistance of the rain board decreases resulting in a medium resistance. The same happened when I touched the rain sensor, because my skin is also conductive, connecting both copper tracks.
@@ -94,7 +86,7 @@ If there is heavy rain, more and more rain drops falling on the board and furthe
 
 Summarizing the rain board: The rain board is a rain depended resistor that has a high resistance when there is no rain and a low resistance when rain drops are on the circuit board. The operating principle is the same as that of a photoresistor.
 
-Functionality of the Control Board of a Rain Sensor
+### Functionality of the Control Board of a Rain Sensor
 The control board consists of two input pins and four output pins. The input pins are connected to the rain board and the output pins to your favorite microcontroller.
 
 On the control board you find multiple resistors that also functions are the voltage divider to provide an analog signal for the rain intensity. Therefore as input we get a resistance from the rain board and the control board converts this resistance into a voltage drop between the analog pin and ground. The microcontroller uses the internal analog to digital converter (ADC) to convert the voltage from the analog pin to a digital value between 0 and 1023 that can be printed to the serial output in your Arduino IDE.
@@ -103,7 +95,7 @@ The biggest part on the control board is the potentiometer to adjust the sensiti
 
 But who does this comparison between the two resistances? This is done by the LM393 comparator because the voltage drop over both resistors is linear to their resistance due to ohms law. The LM393 consists of two independent precision voltage comparators and is specially designed to operate from a single power supply, in our case the microcontroller
 
-# Soil Moisture Sensor
+## Soil Moisture Sensor
 The main component of the project  is the Soil Moisture Sensor. It consists of two parts: The main Sensor and the Control Board.
 
 Sensor part of the Soil Moisture Sensor consists of a couple of conductive probes that can be used to measure the volumetric content of water in soil.
@@ -114,7 +106,7 @@ Coming to the control board, it is made up of LM393 IC, which is a voltage compa
 
 Additionally, there is an option to adjust the sensitivity of the module with the help of a Potentiometer.
 
-Working of Soil Moisture Sensor
+### Working of Soil Moisture Sensor
 The working of the Soil Moisture Sensor is very simple. It works on the principle of voltage comparison. The following circuit will be helpful in understanding the working of a typical soil moisture sensor.
 
 ![image](https://user-images.githubusercontent.com/97329187/187373627-7717da84-ab9c-4c31-b549-0be72e1d9df1.png)
@@ -125,13 +117,13 @@ Based on the amount of water in the soil, the conductivity in the probe varies. 
 
 Similarly, when there is adequate water, the conductivity of the probe increases and the output of the comparator becomes LOW. The LED then starts glowing.
 
-# 5V Relay
+## 5V Relay
 
 What is a 5V Relay?
 
 A 5v relay is an automatic switch that is commonly used in an automatic control circuit and to control a high-current using a low-current signal. The input voltage of the relay signal ranges from 0 to 5V.
 
-5V Relay Module Pin Configuration
+### 5V Relay Module Pin Configuration
 
 The pin configuration of the 5V relay module is shown below. This module includes 6-pins where each pin and its functionality are discussed below.
 
@@ -152,7 +144,7 @@ However, these modules generally work on an active high signal which will streng
 
 Ground: This pin connects the GND terminal of the power supply
 
-Specifications
+### Specifications
 The specifications of a 1- channel relay module include the following.
 
 Voltage supply ranges from 3.75V – 6V
@@ -165,9 +157,23 @@ The highest contact voltage of a relay is 250VAC/30VDC
 
 The maximum current is 10A
 
-Working
+### Working
 
 The relay uses the current supply for opening or closing switch contacts. Usually, this can be done through a coil to magnetize the switch contacts & drags them jointly once activated. A spring drives them separately once the coil is not strengthened.
 
 By using this system, there are mainly two benefits, the first one is, the required current for activating the relay is less as compared to the current used by relay contacts for switching. The other benefit is, both the contacts & the coil are isolated galvanically, which means there is no electrical connection among them.
+
+## Thingspeak IOT Platform
+![IMG_20220910_000640_edit_220020509202364](https://user-images.githubusercontent.com/97329187/193833918-2c793651-7aab-469f-b03d-c56739126748.jpg)
+![IMG_20220910_000636_edit_220033432809133](https://user-images.githubusercontent.com/97329187/193833961-7b784832-fee9-46ba-b71b-c6d4b77afce1.jpg)
+![IMG_20220910_000632_edit_220046531973714](https://user-images.githubusercontent.com/97329187/193833987-b095a929-c85a-4b79-84d9-916b30360181.jpg)
+![IMG_20220910_000657_edit_220006835288303](https://user-images.githubusercontent.com/97329187/193834006-d6c9eab9-e8b1-4ff8-987f-d8b37f2e94e8.jpg)
+
+## Blynk
+![Screenshot_20220911_175103_com huawei himovie overseas](https://user-images.githubusercontent.com/97329187/193834105-427cb825-6de2-4aaa-8b29-7a0757bd19cd.png)
+![Screenshot_20220911_175145_com huawei himovie overseas_edit_300927465101997](https://user-images.githubusercontent.com/97329187/193834139-fca7599c-81de-4d74-927c-d6e9b52b8cef.jpg)
+
+## MIT app invertor for Bluetooth
+![Screenshot_20220911_175305_com huawei himovie overseas_edit_301027957842607](https://user-images.githubusercontent.com/97329187/193834186-837c8442-25ca-4dbb-a91a-70d4f9f9da3e.jpg)
+
 
